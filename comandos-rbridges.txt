@@ -1,0 +1,275 @@
+enable:
+
+  configure terminal
+  copy running-config startup-config
+  debug isis adj-packets
+  debug isis checksum-errors
+  debug isis events
+  debug isis local-updates
+  debug isis protocol-errors
+  debug isis route-events
+  debug isis snp-packets
+  debug isis spf-events
+  debug isis spf-statistics
+  debug isis spf-triggers
+  debug isis update-packets
+  debug trill events
+  disable
+  end
+  exit
+  help
+  list
+  logmsg (emergencies|alerts|critical|errors|warnings|notifications|informational|debugging) .MESSAGE
+  no debug isis adj-packets
+  no debug isis checksum-errors
+  no debug isis events
+  no debug isis local-updates
+  no debug isis protocol-errors
+  no debug isis route-events
+  no debug isis snp-packets
+  no debug isis spf-events
+  no debug isis spf-statistics
+  no debug isis spf-triggers
+  no debug isis update-packets
+  no debug trill events
+  no terminal monitor
+  quit
+  show clns neighbors
+  show clns neighbors detail
+  show debugging
+  show history
+  show ip access-list
+  show ip access-list (<1-99>|<100-199>|<1300-1999>|<2000-2699>|WORD)
+  show ipv6 access-list
+  show ipv6 access-list WORD
+  show isis database
+  show isis database detail
+  show isis hostname
+  show isis neighbors
+  show isis neighbors detail
+  show isis topology
+  show isis topology level-1
+  show isis topology level-2
+  show logging
+  show memory
+  show memory all
+  show memory bgp
+  show memory isis
+  show memory lib
+  show memory ospf
+  show memory ospf6
+  show memory rip
+  show memory ripng
+  show memory zebra
+  show running-config
+  show startup-config
+  show thread cpu [FILTER]
+  show trill adjacencies
+  show trill circuits
+  show trill forwarding
+  show trill nickname database
+  show version
+  show work-queues
+  terminal length <0-512>
+  terminal monitor
+  terminal no length
+  terminal no monitor
+  who
+  write
+  write file
+  write memory
+  write terminal
+
+configure terminal
+
+  access-list (<1-99>|<100-199>|<1300-1999>|<2000-2699>|WORD) remark .LINE
+  access-list (<1-99>|<1300-1999>) (deny|permit) A.B.C.D
+  access-list (<1-99>|<1300-1999>) (deny|permit) A.B.C.D A.B.C.D
+  access-list (<1-99>|<1300-1999>) (deny|permit) any
+  access-list (<1-99>|<1300-1999>) (deny|permit) host A.B.C.D
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip A.B.C.D A.B.C.D A.B.C.D A.B.C.D
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip A.B.C.D A.B.C.D any
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip A.B.C.D A.B.C.D host A.B.C.D
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip any A.B.C.D A.B.C.D
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip any any
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip any host A.B.C.D
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip host A.B.C.D A.B.C.D A.B.C.D
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip host A.B.C.D any
+  access-list (<100-199>|<2000-2699>) (deny|permit) ip host A.B.C.D host A.B.C.D
+  access-list WORD (deny|permit) A.B.C.D/M
+  access-list WORD (deny|permit) A.B.C.D/M exact-match
+  access-list WORD (deny|permit) any
+  banner motd default
+  banner motd file [FILE]
+  debug isis adj-packets
+  debug isis checksum-errors
+  debug isis events
+  debug isis local-updates
+  debug isis protocol-errors
+  debug isis route-events
+  debug isis snp-packets
+  debug isis spf-events
+  debug isis spf-statistics
+  debug isis spf-triggers
+  debug isis update-packets
+  debug trill events
+  enable password (8|) WORD
+  enable password LINE
+  end
+  exit
+ help
+  hostname WORD
+  interface IFNAME
+  ipv6 access-list WORD (deny|permit) X:X::X:X/M
+  ipv6 access-list WORD (deny|permit) X:X::X:X/M exact-match
+  ipv6 access-list WORD (deny|permit) any
+  ipv6 access-list WORD remark .LINE
+  isis trill
+  line vty
+  list
+  log facility (kern|user|mail|daemon|auth|syslog|lpr|news|uucp|cron|local0|local1|local2|local3|local4|local5|local6|local7)
+  log file FILENAME
+  log file FILENAME (emergencies|alerts|critical|errors|warnings|notifications|informational|debugging)
+  log monitor
+  log monitor (emergencies|alerts|critical|errors|warnings|notifications|informational|debugging)
+  log record-priority
+  log stdout
+  log stdout (emergencies|alerts|critical|errors|warnings|notifications|informational|debugging)
+  log syslog
+  log syslog (emergencies|alerts|critical|errors|warnings|notifications|informational|debugging)
+  log timestamp precision <0-6>
+  no access-list (<1-99>|<100-199>|<1300-1999>|<2000-2699>|WORD)
+  no access-list (<1-99>|<100-199>|<1300-1999>|<2000-2699>|WORD) remark
+  no access-list (<1-99>|<100-199>|<1300-1999>|<2000-2699>|WORD) remark .LINE
+  no access-list (<1-99>|<1300-1999>) (deny|permit) A.B.C.D
+  no access-list (<1-99>|<1300-1999>) (deny|permit) A.B.C.D A.B.C.D
+  no access-list (<1-99>|<1300-1999>) (deny|permit) any
+  no access-list (<1-99>|<1300-1999>) (deny|permit) host A.B.C.D
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip A.B.C.D A.B.C.D A.B.C.D A.B.C.D
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip A.B.C.D A.B.C.D any
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip A.B.C.D A.B.C.D host A.B.C.D
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip any A.B.C.D A.B.C.D
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip any any
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip any host A.B.C.D
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip host A.B.C.D A.B.C.D A.B.C.D
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip host A.B.C.D any
+  no access-list (<100-199>|<2000-2699>) (deny|permit) ip host A.B.C.D host A.B.C.D
+  no access-list WORD (deny|permit) A.B.C.D/M
+  no access-list WORD (deny|permit) A.B.C.D/M exact-match
+  no access-list WORD (deny|permit) any
+  no banner motd
+  no debug isis adj-packets
+  no debug isis checksum-errors
+  no debug isis events
+  no debug isis local-updates
+  no debug isis protocol-errors
+  no debug isis route-events
+  no debug isis snp-packets
+  no debug isis spf-events
+  no debug isis spf-statistics
+  no debug isis spf-triggers
+  no debug isis update-packets
+  no debug trill events
+  no enable password
+  no hostname [HOSTNAME]
+  no ipv6 access-list WORD
+  no ipv6 access-list WORD (deny|permit) X:X::X:X/M
+  no ipv6 access-list WORD (deny|permit) X:X::X:X/M exact-match
+  no ipv6 access-list WORD (deny|permit) any
+  no ipv6 access-list WORD remark
+  no ipv6 access-list WORD remark .LINE
+  no isis trill
+  no log facility [FACILITY]
+  no log file FILENAME LEVEL
+  no log file [FILENAME]
+  no log monitor [LEVEL]
+  no log record-priority
+  no log stdout [LEVEL]
+  no log syslog [LEVEL]
+  no log syslog facility (kern|user|mail|daemon|auth|syslog|lpr|news|uucp|cron|local0|local1|local2|local3|local4|local5|local6|local7)
+  no log timestamp precision
+  no router isis WORD
+  no service advanced-vty
+  no service password-encryption
+  no service terminal-length [<0-512>]
+  password (8|) WORD
+  password LINE
+  quit
+  router isis WORD
+  service advanced-vty
+  service password-encryption
+  service terminal-length <0-512>
+  show history
+  show running-config
+  write
+  write file
+  write memory
+  write terminal
+
+
+Interface
+
+  description .LINE
+  end
+  exit
+  help
+  ip router isis WORD
+  ipv6 router isis WORD
+  isis circuit-type (level-1|level-1-2|level-2-only)
+  isis csnp-interval <0-65535>
+  isis csnp-interval <0-65535> level-1
+  isis csnp-interval <0-65535> level-2
+  isis hello padding
+  isis hello-interval (<1-65535>|minimal)
+  isis hello-interval (<1-65535>|minimal) level-1
+  isis hello-interval (<1-65535>|minimal) level-2
+  isis hello-multiplier <3-1000>
+  isis hello-multiplier <3-1000> level-1
+  isis hello-multiplier <3-1000> level-2
+  isis metric <0-16777215>
+  isis password WORD
+  isis priority <0-127>
+  isis priority <0-127> level-1
+  isis priority <0-127> level-2
+  list
+  no description
+  no ip router isis WORD
+  no ipv6 router isis WORD
+  no isis circuit-type (level-1|level-1-2|level-2-only)
+  no isis csnp-interval
+  no isis csnp-interval <0-65535>
+  no isis csnp-interval <0-65535> level-1
+  no isis csnp-interval <0-65535> level-2
+  no isis csnp-interval level-1
+  no isis csnp-interval level-2
+  no isis hello padding
+  no isis hello-interval
+  no isis hello-interval (<1-65535>|minimal)
+  no isis hello-interval (<1-65535>|minimal) level-1
+  no isis hello-interval (<1-65535>|minimal) level-2
+  no isis hello-interval level-1
+  no isis hello-interval level-2
+  no isis hello-multiplier
+  no isis hello-multiplier <3-1000>
+  no isis hello-multiplier <3-1000> level-1
+  no isis hello-multiplier <3-1000> level-2
+  no isis hello-multiplier level-1
+  no isis hello-multiplier level-2
+  no isis metric
+  no isis metric <0-16777215>
+  no isis password
+  no isis priority
+  no isis priority <0-127>
+  no isis priority <0-127> level-1
+  no isis priority <0-127> level-2
+  no isis priority level-1
+  no isis priority level-2
+  quit
+  show running-config
+  trill isis no vlan <1-4094>
+  trill isis pvid <1-4094>
+  trill isis vlan <1-4094>
+  write
+  write file
+  write memory
+  write terminal

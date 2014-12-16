@@ -1,0 +1,2 @@
+rb1_a:rb1_p1:rb1_p2:cvlan1_1
+rb2_b:rb2_p1:rb2_p2:svlan1_1

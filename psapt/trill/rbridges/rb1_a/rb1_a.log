@@ -1,0 +1,105 @@
+
+2014/08/15 11:13:56 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 11:13:56 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 11:13:56 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 11:13:56 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2014/08/15 11:14:18 ISIS: isis_dr_commence l1
+2014/08/15 11:14:18 ISIS: New LSP with ID 8620.40fe.2281-1a-00 seqnum 00000001
+2014/08/15 11:14:18 ISIS: ISIS-Evt (rb1_a) DIS status change
+2014/08/15 11:14:19 ISIS: ISIS TRILL removed any nickname associated with sysID:1e51.c5df.c8ef LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:19 ISIS: ISIS TRILL removed any nickname associated with sysID:f6ed.68bf.8866 LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:20 ISIS: isis_dr_commence l1
+2014/08/15 11:14:20 ISIS: New LSP with ID 8620.40fe.2281-1b-00 seqnum 00000001
+2014/08/15 11:14:20 ISIS: ISIS-Evt (rb1_a) DIS status change
+2014/08/15 11:14:20 ISIS: ISIS TRILL removed any nickname associated with sysID:2af0.4b8b.d2b5 LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:20 ISIS: ISIS TRILL removed any nickname associated with sysID:5e1b.e5f4.005f LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:21 ISIS: ISIS TRILL removed any nickname associated with sysID:a6da.0329.3f2f LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:27 ISIS: ISIS-Evt (rb1_a) DIS status change
+2014/08/15 11:14:27 ISIS: ISIS TRILL LSPDB acquire event:1 cid:28, done:0
+2014/08/15 11:14:28 ISIS: ISIS TRILL LSPDB acquire event:0 cid:28, done:0
+2014/08/15 11:14:29 ISIS: ISIS TRILL LSPDB acquire event:1 cid:28, done:0
+2014/08/15 11:14:36 ISIS: ISIS TRILL LSPDB acquire event:1 cid:28, done:0
+2014/08/15 11:14:37 ISIS: ISIS TRILL LSPDB acquire event:0 cid:28, done:0
+2014/08/15 11:14:38 ISIS: ISIS TRILL LSPDB acquire event:1 cid:28, done:1
+2014/08/15 11:14:38 ISIS: ISIS TRILL generated nick:52917
+2014/08/15 11:14:38 ISIS: SIGHUP received
+2014/08/15 11:14:38 ISIS: Reload
+2014/08/15 11:14:38 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 11:14:38 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 11:14:38 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 11:14:38 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2014/08/15 11:14:46 ISIS: New LSP with ID 1e51.c5df.c8ef-00-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID 1e51.c5df.c8ef-25-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID 2af0.4b8b.d2b5-00-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID 2af0.4b8b.d2b5-23-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID 2af0.4b8b.d2b5-24-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID 5e1b.e5f4.005f-00-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID 5e1b.e5f4.005f-1f-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID a6da.0329.3f2f-00-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID f6ed.68bf.8866-00-00 seqnum 00000000
+2014/08/15 11:14:46 ISIS: New LSP with ID f6ed.68bf.8866-20-00 seqnum 00000000
+2014/08/15 11:14:47 ISIS: ISIS TRILL removed any nickname associated with sysID:1e51.c5df.c8ef LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:47 ISIS: ISIS TRILL removed any nickname associated with sysID:2af0.4b8b.d2b5 LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:47 ISIS: ISIS TRILL removed any nickname associated with sysID:5e1b.e5f4.005f LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:47 ISIS: ISIS TRILL removed any nickname associated with sysID:a6da.0329.3f2f LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:47 ISIS: ISIS TRILL removed any nickname associated with sysID:f6ed.68bf.8866 LSP seqnum:0x00000002 pseudonode:0
+2014/08/15 11:14:49 ISIS: ISIS TRILL nick recv:32969 from sysID:1e51.c5df.c8ef
+2014/08/15 11:14:49 ISIS: ISIS TRILL nick recv:815 from sysID:2af0.4b8b.d2b5
+2014/08/15 11:14:49 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 11:14:49 ISIS: LSP PURGE NON EXIST
+2014/08/15 11:14:49 ISIS: LSP PURGE NON EXIST
+2014/08/15 11:14:49 ISIS: ISIS-Upd (rb1_a): L1 LSP 8620.40fe.2281.1a-00 seq 0x00000001 aged out
+2014/08/15 11:14:49 ISIS: ISIS-Upd (rb1_a): L1 LSP 8620.40fe.2281.1b-00 seq 0x00000001 aged out
+2014/08/15 11:14:50 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 11:15:02 ISIS: isis_dr_commence l1
+2014/08/15 11:15:02 ISIS: New LSP with ID 8620.40fe.2281-1b-00 seqnum 00000001
+2014/08/15 11:15:02 ISIS: ISIS-Evt (rb1_a) DIS status change
+2014/08/15 11:15:02 ISIS: isis_dr_commence l1
+2014/08/15 11:15:02 ISIS: New LSP with ID 8620.40fe.2281-1a-00 seqnum 00000001
+2014/08/15 11:15:02 ISIS: ISIS-Evt (rb1_a) DIS status change
+2014/08/15 11:15:03 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 11:15:05 ISIS: ISIS TRILL nick recv:4893 from sysID:a6da.0329.3f2f
+2014/08/15 11:15:05 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 11:15:06 ISIS: ISIS-Evt (rb1_a) DIS status change
+2014/08/15 11:15:32 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 11:15:34 ISIS: ISIS TRILL nick recv:4893 from sysID:a6da.0329.3f2f
+2014/08/15 11:15:34 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 11:28:58 ISIS: ISIS TRILL nick recv:32969 from sysID:1e51.c5df.c8ef
+2014/08/15 11:28:58 ISIS: ISIS TRILL nick recv:815 from sysID:2af0.4b8b.d2b5
+2014/08/15 11:29:38 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 11:29:39 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 11:29:40 ISIS: ISIS TRILL nick recv:4893 from sysID:a6da.0329.3f2f
+2014/08/15 11:43:46 ISIS: ISIS TRILL nick recv:815 from sysID:2af0.4b8b.d2b5
+2014/08/15 11:43:52 ISIS: ISIS TRILL nick recv:32969 from sysID:1e51.c5df.c8ef
+2014/08/15 11:44:29 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 11:44:30 ISIS: ISIS TRILL nick recv:4893 from sysID:a6da.0329.3f2f
+2014/08/15 11:44:35 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 11:58:22 ISIS: ISIS TRILL nick recv:32969 from sysID:1e51.c5df.c8ef
+2014/08/15 11:58:27 ISIS: ISIS TRILL nick recv:815 from sysID:2af0.4b8b.d2b5
+2014/08/15 11:58:51 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 11:59:10 ISIS: ISIS TRILL nick recv:4893 from sysID:a6da.0329.3f2f
+2014/08/15 11:59:13 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 12:12:58 ISIS: ISIS TRILL nick recv:815 from sysID:2af0.4b8b.d2b5
+2014/08/15 12:13:15 ISIS: ISIS TRILL nick recv:32969 from sysID:1e51.c5df.c8ef
+2014/08/15 12:13:29 ISIS: ISIS TRILL nick recv:50743 from sysID:5e1b.e5f4.005f
+2014/08/15 12:14:08 ISIS: ISIS TRILL nick recv:4893 from sysID:a6da.0329.3f2f
+2014/08/15 12:14:09 ISIS: ISIS TRILL nick recv:14377 from sysID:f6ed.68bf.8866
+2014/08/15 12:21:59 ISIS: SIGHUP received
+2014/08/15 12:21:59 ISIS: Reload
+2014/08/15 12:21:59 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:21:59 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:21:59 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:21:59 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2014/08/15 12:21:59 ISIS: SIGHUP received
+2014/08/15 12:21:59 ISIS: Reload
+2014/08/15 12:22:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:22:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:22:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:22:00 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2014/08/15 12:22:00 ISIS: SIGHUP received
+2014/08/15 12:22:00 ISIS: Reload
+2014/08/15 12:22:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:22:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:22:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/15 12:22:00 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2014/08/15 12:22:00 ISIS: Terminating on signal SIGTERM

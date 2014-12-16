@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<!--
+	This file is part of Quagga.
+
+	Quagga is free software; you can redistribute it and/or modify it
+	under the terms of the GNU General Public License as published by the
+	Free Software Foundation; either version 2, or (at your option) any
+	later version.
+
+	Quagga is distributed in the hope that it will be useful, but 
+	WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	General Public License for more details.
+
+	You should have received a copy of the GNU General Public License  
+	along with Quagga; see the file COPYING.  If not, write to the Free
+	Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+	02111-1307, USA.
+
+	Copyright (c) 2009, 2011, Oracle and/or its affiliates. All rights reserved.
+	Use is subject to license terms.
+-->
+
+<service_bundle type='manifest' name='SUNWtrill-daemons:quagga'>
+
+<service
+	name='network/routing/trill'
+	type='service'
+	version='1'>
+
+	<dependency name='filesystem'
+		grouping='require_all'
+		restart_on='none'
+		type='service'>
+		<service_fmri value='svc:/system/filesystem/local' />
+	</dependency>
+
+	<dependency name='datalink'
+		grouping='require_all'
+		restart_on='none'
+		type='service'>
+		<service_fmri value='svc:/network/datalink-management' />
+	</dependency>
+
+	<exec_method
+		type='method'
+		name='stop'
+		exec=':kill'
+		timeout_seconds='60'>
+	</exec_method>
+
+	<exec_method
+		type='method'
+		name='start'
+		exec='/usr/sbin/trillsh %i &amp;'
+		timeout_seconds='60'>
+		<method_context>
+		  <method_credential
+		   user='root' group='root'/>
+ 		</method_context>
+	</exec_method>
+
+	<exec_method
+		type='method'
+		name='refresh'
+		exec=':kill -HUP'
+		timeout_seconds='60'>
+	</exec_method>
+
+	<property_group name='startd'
+		type='framework'>
+		<!-- sub-process core dumps shouldn't restart session -->
+		<propval name='ignore_error'
+		    type='astring' value='core,signal' />
+	</property_group>
+
+	<stability value='Unstable' />
+
+	<template>
+		<common_name>
+			<loctext xml:lang='C'>
+			Quagga: trilld, TRILL bridging protocol daemon.
+			</loctext>
+		</common_name>
+		<documentation>
+			<manpage title='trilld' section='1M'
+				manpath='/usr/share/man' />
+			<doc_link name='quagga.net' 
+				uri='http://www.quagga.net/' />
+		</documentation>
+	</template>
+</service>
+</service_bundle>

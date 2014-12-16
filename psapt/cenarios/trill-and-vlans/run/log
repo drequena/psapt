@@ -1,0 +1,421 @@
+Checando status do cenario rb-and-vlans
+-----------------------Start begin: Cenario : 19:18:15 12/08-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+cliente_vlan
+VM cliente_vlan registrada
+Checando link da VM cliente_vlan
+Erro: link web1 da VM cliente_vlan nao consta no arquivo de link /opt/psapt/cenarios/rb-and-vlans/links
+Checando status do cenario rb-and-vlans
+-----------------------Start begin: Cenario : 19:36:13 12/08-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+cliente_vlan
+VM cliente_vlan registrada
+Checando link da VM cliente_vlan
+link web1 nao encontrado em /opt/psapt/cenarios/rb-and-vlans/links, procurando em /opt/psapt/cenarios/rb-and-vlans/vlans
+link web1 achado em /opt/psapt/cenarios/rb-and-vlans/vlans-> ok
+server_vlan
+VM server_vlan registrada
+Checando link da VM server_vlan
+link web2 nao encontrado em /opt/psapt/cenarios/rb-and-vlans/links, procurando em /opt/psapt/cenarios/rb-and-vlans/vlans
+link web2 achado em /opt/psapt/cenarios/rb-and-vlans/vlans-> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/vms para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/links_connections para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/links para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/rbridges para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/bridges para /opt/psapt/cenarios/rb-and-vlans/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet client-vlan1_1
+/usr/sbin/dladm: invalid link name 'client-vlan1_1'
+Erro na criacao dos simnets
+Funcao Stop_links\(\) chamada por erro - /usr/sbin/dladm delete-simnet rb1_p1
+Funcao Stop_links\(\) chamada por erro - /usr/sbin/dladm delete-simnet rb1_p2
+Funcao Stop_links\(\) chamada por erro - /usr/sbin/dladm delete-simnet client1_1
+Apagando arquivo /opt/psapt/cenarios/rb-and-vlans/run/links.temp
+Checando status do cenario rb-and-vlans
+-----------------------Start begin: Cenario : 20:40:54 12/08-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+cliente_vlan
+VM cliente_vlan registrada
+Checando link da VM cliente_vlan
+link web1 nao encontrado em /opt/psapt/cenarios/rb-and-vlans/links, procurando em /opt/psapt/cenarios/rb-and-vlans/vlans
+link web1 achado em /opt/psapt/cenarios/rb-and-vlans/vlans-> ok
+server_vlan
+VM server_vlan registrada
+Checando link da VM server_vlan
+link web2 nao encontrado em /opt/psapt/cenarios/rb-and-vlans/links, procurando em /opt/psapt/cenarios/rb-and-vlans/vlans
+link web2 achado em /opt/psapt/cenarios/rb-and-vlans/vlans-> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/vlans para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/vms para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/links_connections para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/links para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/rbridges para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/bridges para /opt/psapt/cenarios/rb-and-vlans/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet cvlan1_1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Criando Simnet - /usr/sbin/dladm create-simnet svlan1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l cvlan1_1  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l svlan1_1  -l rb2_p2  -l rb2_p1  rb2_b
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+VM encontrada usando Vlan
+Criando Vlan
+Executando: dladm create-vlan -l cvlan1_1 -v 9 web1
+Iniciando VM: cliente_vlan
+Definindo IP: 192.168.56.27 no link: web1
+ipadm: cannot create address: Address object already exists
+Erro ao definir IP: 192.168.56.27 no link: web1 para a VM: cliente_vlan
+VM encontrada usando Vlan
+Criando Vlan
+Executando: dladm create-vlan -l svlan1_1 -v 9 web2
+Iniciando VM: server_vlan
+Definindo IP: 192.168.56.28 no link: web2
+ipadm: cannot create address: Address object already exists
+Erro ao definir IP: 192.168.56.28 no link: web2 para a VM: server_vlan
+Criando arquivo de status em /opt/psapt/cenarios/rb-and-vlans/run/rb-and-vlans.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 20:42:08 12/08-----------------------
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rb-and-vlans
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+Checando a existencia da VM cliente_vlan
+Existe
+Checando status do cenario rb-and-vlans
+Checando a existencia da VM cliente_vlan
+Existe
+Checando se VM: cliente_vlan tem IP definido
+Apagando antigo endereco IP do link: web1  da VM: cliente_vlan
+Definindo novo IP
+IP definido com sucesso.
+Function call: commit_vm_ip_change cliente_vlan 192.168.56.27
+Gerando arquivo temporario /opt/psapt/cenarios/rb-and-vlans/run/vms.tmp
+Conteudo do arquivo: 
+client:192.168.56.25
+server:192.168.56.26
+server_vlan:192.168.56.28
+cliente_vlan:192.168.56.27
+Movendo /opt/psapt/cenarios/rb-and-vlans/run/vms.tmp para /opt/psapt/cenarios/rb-and-vlans/run/vms
+Checando status do cenario rb-and-vlans
+Checando a existencia da VM server_vlan
+Existe
+Checando se VM: server_vlan tem IP definido
+Apagando antigo endereco IP do link: web2  da VM: server_vlan
+Definindo novo IP
+IP definido com sucesso.
+Function call: commit_vm_ip_change server_vlan 192.168.56.28
+Gerando arquivo temporario /opt/psapt/cenarios/rb-and-vlans/run/vms.tmp
+Conteudo do arquivo: 
+client:192.168.56.25
+server:192.168.56.26
+cliente_vlan:192.168.56.27
+server_vlan:192.168.56.28
+Movendo /opt/psapt/cenarios/rb-and-vlans/run/vms.tmp para /opt/psapt/cenarios/rb-and-vlans/run/vms
+Checando status do cenario rb-and-vlans
+Checando a existencia da VM cliente_vlan
+Existe
+Checando status do cenario rb-and-vlans
+Checando a existencia da VM server_vlan
+Existe
+Checando status do cenario rb-and-vlans
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/bridges
+-----------------------STOP begin: Cenario : 21:50:06 12/08-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo IP:  no link: web1
+Desligando VM: cliente_vlan
+Vm usando Vlan encontrada
+Removendo Vlan web1
+Removendo IP:  no link: web2
+Desligando VM: server_vlan
+Vm usando Vlan encontrada
+Removendo Vlan web2
+Removendo links da RBridge com comando - dladm remove-bridge  -l cvlan1_1  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l svlan1_1  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rb-and-vlans/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+/usr/sbin/dladm: simnet deletion failed: link busy
+Erro ao deletar simnet rb1_p1
+Checando status do cenario rb-and-vlans
+-----------------------Start begin: Cenario : 08:47:50 13/08-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+cliente_vlan
+VM cliente_vlan registrada
+Checando link da VM cliente_vlan
+link web1 nao encontrado em /opt/psapt/cenarios/rb-and-vlans/links, procurando em /opt/psapt/cenarios/rb-and-vlans/vlans
+link web1 achado em /opt/psapt/cenarios/rb-and-vlans/vlans-> ok
+server_vlan
+VM server_vlan registrada
+Checando link da VM server_vlan
+link web2 nao encontrado em /opt/psapt/cenarios/rb-and-vlans/links, procurando em /opt/psapt/cenarios/rb-and-vlans/vlans
+link web2 achado em /opt/psapt/cenarios/rb-and-vlans/vlans-> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/vlans para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/vms para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/links_connections para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/links para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/rbridges para /opt/psapt/cenarios/rb-and-vlans/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-vlans/bridges para /opt/psapt/cenarios/rb-and-vlans/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet cvlan1_1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Criando Simnet - /usr/sbin/dladm create-simnet svlan1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l cvlan1_1  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l svlan1_1  -l rb2_p2  -l rb2_p1  rb2_b
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+VM encontrada usando Vlan
+Criando Vlan
+Executando: dladm create-vlan -l cvlan1_1 -v 9 web1
+Iniciando VM: cliente_vlan
+Definindo IP: 192.168.56.27 no link: web1
+VM encontrada usando Vlan
+Criando Vlan
+Executando: dladm create-vlan -l svlan1_1 -v 9 web2
+Iniciando VM: server_vlan
+Definindo IP: 192.168.56.28 no link: web2
+Criando arquivo de status em /opt/psapt/cenarios/rb-and-vlans/run/rb-and-vlans.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 08:49:06 13/08-----------------------
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+/tmp/pub/psatp nao existe, criando...
+Criando arquivo rb1_p1.run
+Processo de captura do link rb1_p1 iniciado com sucesso. Executando sob pid: 8028
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb1_p2.run
+Processo de captura do link rb1_p2 iniciado com sucesso. Executando sob pid: 8038
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo client1_1.run
+Processo de captura do link client1_1 iniciado com sucesso. Executando sob pid: 8050
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo cvlan1_1.run
+Processo de captura do link cvlan1_1 iniciado com sucesso. Executando sob pid: 8060
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb2_p1.run
+Processo de captura do link rb2_p1 iniciado com sucesso. Executando sob pid: 8072
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb2_p2.run
+Processo de captura do link rb2_p2 iniciado com sucesso. Executando sob pid: 8082
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo server1_1.run
+Processo de captura do link server1_1 iniciado com sucesso. Executando sob pid: 8092
+Checando status do cenario rb-and-vlans
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo svlan1_1.run
+Processo de captura do link svlan1_1 iniciado com sucesso. Executando sob pid: 8104
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+Checando a existencia da VM client
+Existe
+Checando status do cenario rb-and-vlans
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rb-and-vlans
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rb-and-vlans
+Checando status do cenario rb-and-vlans
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rb-and-vlans
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-vlans/bridges
+-----------------------STOP begin: Cenario : 09:20:33 13/08-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo IP:  no link: web1
+Desligando VM: cliente_vlan
+Vm usando Vlan encontrada
+Removendo Vlan web1
+Removendo IP:  no link: web2
+Desligando VM: server_vlan
+Vm usando Vlan encontrada
+Removendo Vlan web2
+Removendo links da RBridge com comando - dladm remove-bridge  -l cvlan1_1  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l svlan1_1  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rb-and-vlans/run/client1_1.run
+/opt/psapt/cenarios/rb-and-vlans/run/cvlan1_1.run
+/opt/psapt/cenarios/rb-and-vlans/run/rb1_p1.run
+/opt/psapt/cenarios/rb-and-vlans/run/rb1_p2.run
+/opt/psapt/cenarios/rb-and-vlans/run/rb2_p1.run
+/opt/psapt/cenarios/rb-and-vlans/run/rb2_p2.run
+/opt/psapt/cenarios/rb-and-vlans/run/server1_1.run
+/opt/psapt/cenarios/rb-and-vlans/run/svlan1_1.run
+Capturas encontradas, matando processos...
+Matando processo 8050
+Matando processo 8060
+Matando processo 8028
+Matando processo 8038
+Matando processo 8072
+Matando processo 8082
+Matando processo 8092
+Matando processo 8104
+Contorno: Apagando todos os arquivo .run em run-run
+Apagando todos os arquivo .run
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet cvlan1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet svlan1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rb-and-vlans
+RUN_DIR -> /opt/psapt/cenarios/rb-and-vlans/run
+LOG -> /opt/psapt/cenarios/rb-and-vlans/run/log
+Deletando arquivo /opt/psapt/cenarios/rb-and-vlans/run/vms
+Deletando arquivo /opt/psapt/cenarios/rb-and-vlans/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rb-and-vlans/run/links
+Deletando arquivo /opt/psapt/cenarios/rb-and-vlans/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rb-and-vlans/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rb-and-vlans/run/rb-and-vlans.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 09:21:02 13/08-----------------------

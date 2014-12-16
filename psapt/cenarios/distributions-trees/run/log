@@ -1,0 +1,145 @@
+Checando status do cenario distributions-trees
+-----------------------Start begin: Cenario : 11:13:56 15/08-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/distributions-trees/vms para /opt/psapt/cenarios/distributions-trees/run
+Copiando arquivo /opt/psapt/cenarios/distributions-trees/links_connections para /opt/psapt/cenarios/distributions-trees/run
+Copiando arquivo /opt/psapt/cenarios/distributions-trees/links para /opt/psapt/cenarios/distributions-trees/run
+Copiando arquivo /opt/psapt/cenarios/distributions-trees/rbridges para /opt/psapt/cenarios/distributions-trees/run
+Copiando arquivo /opt/psapt/cenarios/distributions-trees/bridges para /opt/psapt/cenarios/distributions-trees/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb5_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb5_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb6_p1
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p3 rb6_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 rb3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p3 rb4_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb4_p2 rb5_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb5_p1 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb3_p1  rb3_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb4_p2  -l rb4_p1  rb4_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb5_p2  -l rb5_p1  rb5_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb6_p1  rb6_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+Criando arquivo de status em /opt/psapt/cenarios/distributions-trees/run/distributions-trees.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 11:14:34 15/08-----------------------
+Checando status do cenario distributions-trees
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb1_p2.run
+Processo de captura do link rb1_p2 iniciado com sucesso. Executando sob pid: 11602
+Checando status do cenario distributions-trees
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb2_p2.run
+Processo de captura do link rb2_p2 iniciado com sucesso. Executando sob pid: 11632
+Checando status do cenario distributions-trees
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb2_p3.run
+Processo de captura do link rb2_p3 iniciado com sucesso. Executando sob pid: 11648
+Checando status do cenario distributions-trees
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb4_p2.run
+Processo de captura do link rb4_p2 iniciado com sucesso. Executando sob pid: 11736
+Checando status do cenario distributions-trees
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb5_p1.run
+Processo de captura do link rb5_p1 iniciado com sucesso. Executando sob pid: 11760
+Checando status do cenario distributions-trees
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/distributions-trees/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/distributions-trees/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/distributions-trees/links
+Checando diferenca em arquivo /opt/psapt/cenarios/distributions-trees/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/distributions-trees/bridges
+-----------------------STOP begin: Cenario : 12:21:46 15/08-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_a
+Deletando a RBridge com comando - dladm delete-bridge  rb2_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb3_p1  rb3_a
+Deletando a RBridge com comando - dladm delete-bridge  rb3_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb4_p2  -l rb4_p1  rb4_a
+Deletando a RBridge com comando - dladm delete-bridge  rb4_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb5_p2  -l rb5_p1  rb5_a
+Deletando a RBridge com comando - dladm delete-bridge  rb5_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb6_p1  rb6_a
+Deletando a RBridge com comando - dladm delete-bridge  rb6_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb4_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb5_p1
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/distributions-trees/run/rb1_p2.run
+/opt/psapt/cenarios/distributions-trees/run/rb2_p2.run
+/opt/psapt/cenarios/distributions-trees/run/rb2_p3.run
+/opt/psapt/cenarios/distributions-trees/run/rb4_p2.run
+/opt/psapt/cenarios/distributions-trees/run/rb5_p1.run
+Capturas encontradas, matando processos...
+Matando processo 11602
+Matando processo 11632
+Matando processo 11648
+Matando processo 11736
+Matando processo 11760
+Contorno: Apagando todos os arquivo .run em run-run
+Apagando todos os arquivo .run
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb5_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb5_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb6_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/distributions-trees
+RUN_DIR -> /opt/psapt/cenarios/distributions-trees/run
+LOG -> /opt/psapt/cenarios/distributions-trees/run/log
+Deletando arquivo /opt/psapt/cenarios/distributions-trees/run/vms
+Deletando arquivo /opt/psapt/cenarios/distributions-trees/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/distributions-trees/run/links
+Deletando arquivo /opt/psapt/cenarios/distributions-trees/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/distributions-trees/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/distributions-trees/run/distributions-trees.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 12:22:09 15/08-----------------------

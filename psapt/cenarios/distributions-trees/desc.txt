@@ -1,0 +1,1 @@
+Cenario que cria uma configuracao de Rbridges para que suas arvores de distribuicao sejam complexas.

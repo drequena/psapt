@@ -1,0 +1,539 @@
+Checando status do cenario rb-and-rstp
+-----------------------Start begin: Cenario : 17:09:34 25/07-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/vms para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/bridges para /opt/psapt/cenarios/rb-and-rstp/run
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 sw4_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p1 sw3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw4_p2 sw2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p2 sw1_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p3 sw3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw3_p3 sw1_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 server1_1
+Apagando links_connections temporario
+Criando Bridge com comando - dladm create-bridge  -l sw1_p2  -l sw1_p1  -p 32768  sw1_a
+Criando Bridge com comando - dladm create-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  -p 32768  sw2_a
+Criando Bridge com comando - dladm create-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  -p 32768  sw3_a
+Criando Bridge com comando - dladm create-bridge  -l sw4_p2  -l sw4_p1  -p 32768  sw4_a
+Apagando arquivo temporario bridges
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p2  -l rb2_p1  rb2_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+ipadm: cannot create address: Can't assign requested address
+Erro ao definir IP: 192.168.56.25 no link: client1_1 para a VM: client
+Criando arquivo de status em /opt/psapt/cenarios/rb-and-rstp/run/rb-and-rstp.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 17:10:01 25/07-----------------------
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando a existencia da VM server
+Existe
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Transformando bridge: sw1_a em uma Rbridge
+Preparando arquivo temporario de bridges
+Conteudo de /opt/psapt/cenarios/rb-and-rstp/run/bridges.temp
+sw2_a:32768:sw2_p1:sw2_p2:sw2_p3
+sw3_a:32768:sw3_p1:sw3_p2:sw3_p3
+sw4_a:32768:sw4_p1:sw4_p2
+Preparando arquivo temporario de Rbridges
+Conteudo de /opt/psapt/cenarios/rb-and-rstp/run/rbridges.temp
+sw1_a:sw1_p1:sw1_p2
+Movendo conteudo de .temp para 
+Removendo arquivo temporario /opt/psapt/cenarios/rb-and-rstp/run/rbridges.temp
+Movendo /opt/psapt/cenarios/rb-and-rstp/run/bridges.temp para /opt/psapt/cenarios/rb-and-rstp/run/bridges
+Checando status do cenario rb-and-rstp
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections
+2d1
+< rb2_p1:sw3_p1
+5,6d3
+< sw2_p3:sw3_p2
+< sw3_p3:sw1_p2
+8a6,8
+> sw3_p3:sw1_p2
+> sw3_p2:sw2_p3
+> sw3_p1:rb2_p1
+Encontrada diferenca no arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections
+Cenario em exec. diferente do original...
+Setando var: cenario, run_dir ,LOG_FILE
+Cenario -> /opt/psapt/cenarios/rb-and-rstp/run
+RUN_DIR -> /opt/psapt/cenarios/rb-and-rstp/run/run
+LOG -> /opt/psapt/cenarios/rb-and-rstp/run/run/../log
+-----------------------STOP begin: Cenario : 16:41:22 29/07-----------------------
+Removendo IP:  no link: client1_1
+ipadm: cannot delete address: Object not found
+Erro ao remover IP:  no link: client1_1 para a VM: client
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p2  -l rb2_p1  rb2_a
+Deletando a RBridge com comando - dladm delete-bridge  rb2_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l sw1_p2  -l sw1_p1  sw1_a
+Deletando a RBridge com comando - dladm delete-bridge  sw1_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  sw2_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  sw3_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw3_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw4_p2  -l sw4_p1  sw4_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw4_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw3_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw3_p1
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rb-and-rstp/run/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+/usr/sbin/dladm: simnet deletion failed: link busy
+Erro ao deletar simnet client1_1
+Checando status do cenario rb-and-rstp
+-----------------------Start begin: Cenario : 16:53:32 29/07-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/vms para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/bridges para /opt/psapt/cenarios/rb-and-rstp/run
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 sw4_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p1 sw3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw4_p2 sw2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p2 sw1_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p3 sw3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw3_p3 sw1_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 server1_1
+Apagando links_connections temporario
+Criando Bridge com comando - dladm create-bridge  -l sw1_p2  -l sw1_p1  -p 32768  sw1_a
+Criando Bridge com comando - dladm create-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  -p 32768  sw2_a
+Criando Bridge com comando - dladm create-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  -p 32768  sw3_a
+Criando Bridge com comando - dladm create-bridge  -l sw4_p2  -l sw4_p1  -p 32768  sw4_a
+Apagando arquivo temporario bridges
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p2  -l rb2_p1  rb2_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+ipadm: cannot create address: Can't assign requested address
+Erro ao definir IP: 192.168.56.25 no link: client1_1 para a VM: client
+Criando arquivo de status em /opt/psapt/cenarios/rb-and-rstp/run/rb-and-rstp.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 16:54:00 29/07-----------------------
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/bridges
+-----------------------STOP begin: Cenario : 08:20:51 30/07-----------------------
+Removendo IP:  no link: client1_1
+ipadm: cannot delete address: Object not found
+Erro ao remover IP:  no link: client1_1 para a VM: client
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p2  -l rb2_p1  rb2_a
+Deletando a RBridge com comando - dladm delete-bridge  rb2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw1_p2  -l sw1_p1  sw1_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw1_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  sw2_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  sw3_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw3_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw4_p2  -l sw4_p1  sw4_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw4_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rb-and-rstp/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+/usr/sbin/dladm: simnet deletion failed: link busy
+Erro ao deletar simnet client1_1
+Checando status do cenario rb-and-rstp
+-----------------------Start begin: Cenario : 15:56:49 30/07-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/vms para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/bridges para /opt/psapt/cenarios/rb-and-rstp/run
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 sw4_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p1 sw3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw4_p2 sw2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p2 sw1_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p3 sw3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw3_p3 sw1_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 server1_1
+Apagando links_connections temporario
+Criando Bridge com comando - dladm create-bridge  -l sw1_p2  -l sw1_p1  -p 32768  sw1_a
+Criando Bridge com comando - dladm create-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  -p 32768  sw2_a
+Criando Bridge com comando - dladm create-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  -p 32768  sw3_a
+Criando Bridge com comando - dladm create-bridge  -l sw4_p2  -l sw4_p1  -p 32768  sw4_a
+Apagando arquivo temporario bridges
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p2  -l rb2_p1  rb2_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+ipadm: cannot create address: Can't assign requested address
+Erro ao definir IP: 192.168.56.25 no link: client1_1 para a VM: client
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+ipadm: cannot create address: Can't assign requested address
+Erro ao definir IP: 192.168.56.26 no link: server1_1 para a VM: server
+Criando arquivo de status em /opt/psapt/cenarios/rb-and-rstp/run/rb-and-rstp.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 15:58:00 30/07-----------------------
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Checando status do cenario rb-and-rstp
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/bridges
+-----------------------STOP begin: Cenario : 16:39:35 30/07-----------------------
+Removendo IP:  no link: client1_1
+ipadm: cannot delete address: Object not found
+Erro ao remover IP:  no link: client1_1 para a VM: client
+Desligando VM: client
+Removendo IP:  no link: server1_1
+ipadm: cannot delete address: Object not found
+Erro ao remover IP:  no link: server1_1 para a VM: server
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p2  -l rb2_p1  rb2_a
+Deletando a RBridge com comando - dladm delete-bridge  rb2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw1_p2  -l sw1_p1  sw1_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw1_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  sw2_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  sw3_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw3_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw4_p2  -l sw4_p1  sw4_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw4_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rb-and-rstp/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rb-and-rstp
+RUN_DIR -> /opt/psapt/cenarios/rb-and-rstp/run
+LOG -> /opt/psapt/cenarios/rb-and-rstp/run/log
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/vms
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/links
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rb-and-rstp/run/rb-and-rstp.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 16:40:08 30/07-----------------------
+Checando status do cenario rb-and-rstp
+-----------------------Start begin: Cenario : 16:41:34 30/07-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/vms para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/links para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges para /opt/psapt/cenarios/rb-and-rstp/run
+Copiando arquivo /opt/psapt/cenarios/rb-and-rstp/bridges para /opt/psapt/cenarios/rb-and-rstp/run
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet sw3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet sw4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 sw4_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p1 sw3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw4_p2 sw2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p2 sw1_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw2_p3 sw3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p sw3_p3 sw1_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 server1_1
+Apagando links_connections temporario
+Criando Bridge com comando - dladm create-bridge  -l sw1_p2  -l sw1_p1  -p 4096  sw1_a
+Criando Bridge com comando - dladm create-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  -p 32768  sw2_a
+Criando Bridge com comando - dladm create-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  -p 32768  sw3_a
+Criando Bridge com comando - dladm create-bridge  -l sw4_p2  -l sw4_p1  -p 32768  sw4_a
+Apagando arquivo temporario bridges
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p2  -l rb2_p1  rb2_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+ipadm: cannot create address: Can't assign requested address
+Erro ao definir IP: 192.168.56.25 no link: client1_1 para a VM: client
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+ipadm: cannot create address: Can't assign requested address
+Erro ao definir IP: 192.168.56.26 no link: server1_1 para a VM: server
+Criando arquivo de status em /opt/psapt/cenarios/rb-and-rstp/run/rb-and-rstp.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 16:42:46 30/07-----------------------
+Checando status do cenario rb-and-rstp
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rb-and-rstp/bridges
+-----------------------STOP begin: Cenario : 16:46:47 30/07-----------------------
+Removendo IP:  no link: client1_1
+ipadm: cannot delete address: Object not found
+Erro ao remover IP:  no link: client1_1 para a VM: client
+Desligando VM: client
+Removendo IP:  no link: server1_1
+ipadm: cannot delete address: Object not found
+Erro ao remover IP:  no link: server1_1 para a VM: server
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p2  -l rb2_p1  rb2_a
+Deletando a RBridge com comando - dladm delete-bridge  rb2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw1_p2  -l sw1_p1  sw1_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw1_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw2_p3  -l sw2_p2  -l sw2_p1  sw2_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw2_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw3_p3  -l sw3_p2  -l sw3_p1  sw3_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw3_a
+Removendo links da Bridge com comando - /usr/sbin/dladm remove-bridge  -l sw4_p2  -l sw4_p1  sw4_a
+Removendo Bridge com comando - /usr/sbin/dladm delete-bridge  sw4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw4_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none sw3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rb-and-rstp/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet sw4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rb-and-rstp
+RUN_DIR -> /opt/psapt/cenarios/rb-and-rstp/run
+LOG -> /opt/psapt/cenarios/rb-and-rstp/run/log
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/vms
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/links
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rb-and-rstp/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rb-and-rstp/run/rb-and-rstp.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 16:47:17 30/07-----------------------

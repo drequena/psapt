@@ -1,0 +1,6 @@
+rb1_a:rb1_p1:rb1_p2:rb1_p3
+rb2_a:rb2_p1:rb2_p2:rb2_p3
+rb3_a:rb3_p1
+rb4_a:rb4_p1:rb4_p2
+rb5_a:rb5_p1:rb5_p2
+rb6_a:rb6_p1

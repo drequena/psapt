@@ -1,0 +1,9 @@
+create -b
+set zonepath=/zones/client
+set brand=solaris
+set autoboot=false
+set ip-type=exclusive
+add net
+set configure-allowed-address=true
+set physical=client1_1
+end

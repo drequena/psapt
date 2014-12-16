@@ -1,0 +1,1 @@
+Cenário de uma rede formada apenas por Rbridges e duas VMs. O objetivo é visualizar a comunicação entre as Rbridges, a formação de vinzinhança e o encapsulamento TRILL.

@@ -1,0 +1,6 @@
+create -b
+set zonepath=/zones/template
+set brand=solaris
+set autoboot=false
+set ip-type=exclusive
+

@@ -1,0 +1,921 @@
+Checando status do cenario rbridges-only
+-----------------------Start begin: Cenario : 15:52:41 17/04-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+Erro: link client1_1 da VM client nao consta no arquivo de link /opt/psapt/cenarios/rbridges-only/links
+Checando status do cenario rbridges-only
+-----------------------Start begin: Cenario : 15:57:29 17/04-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/vms para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links_connections para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/rbridges para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/bridges para /opt/psapt/cenarios/rbridges-only/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p3
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p3 rb3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 rb3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p3 rb4_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb3_p3 rb4_p3
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb4_p1 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+Criando arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 15:58:07 17/04-----------------------
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando a existencia da VM client
+Existe
+Checando status do cenario rbridges-only
+Checando a existencia da VM server
+Existe
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_b
+Nao existe
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb3_b
+Existe
+Listando nick da Rbridge rb3_b
+Listando links da Rbridge rb3_b
+Listando nexthop da Rbridge rb3_b
+Checando modo de operacao da Rbridge rb3_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb3_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb3_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb4_a
+Existe
+Listando nick da Rbridge rb4_a
+Listando links da Rbridge rb4_a
+Listando nexthop da Rbridge rb4_a
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb4_a
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb3_b
+Existe
+Listando nick da Rbridge rb3_b
+Listando links da Rbridge rb3_b
+Listando nexthop da Rbridge rb3_b
+Checando modo de operacao da Rbridge rb3_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb3_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb3_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb4_a
+Existe
+Listando nick da Rbridge rb4_a
+Listando links da Rbridge rb4_a
+Listando nexthop da Rbridge rb4_a
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb4_a
+Checando status do cenario rbridges-only
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/bridges
+-----------------------STOP begin: Cenario : 16:43:55 17/04-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Deletando a RBridge com comando - dladm delete-bridge  rb3_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Deletando a RBridge com comando - dladm delete-bridge  rb4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb4_p1
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rbridges-only/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rbridges-only
+RUN_DIR -> /opt/psapt/cenarios/rbridges-only/run
+LOG -> /opt/psapt/cenarios/rbridges-only/run/log
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/vms
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 16:44:14 17/04-----------------------
+Checando status do cenario rbridges-only
+-----------------------Start begin: Cenario : 20:17:53 07/05-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/vms para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links_connections para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/rbridges para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/bridges para /opt/psapt/cenarios/rbridges-only/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p3
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p3 rb3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 rb3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p3 rb4_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb3_p3 rb4_p3
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb4_p1 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+Criando arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 20:18:39 07/05-----------------------
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb4_a
+Existe
+Listando nick da Rbridge rb4_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb4_a
+Listando nexthop da Rbridge rb4_a
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb4_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb3_b
+Existe
+Listando nick da Rbridge rb3_b
+Listando links da Rbridge rb3_b
+Listando nexthop da Rbridge rb3_b
+Checando modo de operacao da Rbridge rb3_b
+Modo standard identificado
+Checando modo de operacao da Rbridge rb3_b
+Modo standard identificado
+Colhendo informacoes (debug) da Rbridge rb3_b
+Checando status do cenario rbridges-only
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/bridges
+-----------------------STOP begin: Cenario : 20:33:59 07/05-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Deletando a RBridge com comando - dladm delete-bridge  rb3_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Deletando a RBridge com comando - dladm delete-bridge  rb4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb4_p1
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rbridges-only/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rbridges-only
+RUN_DIR -> /opt/psapt/cenarios/rbridges-only/run
+LOG -> /opt/psapt/cenarios/rbridges-only/run/log
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/vms
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 20:34:25 07/05-----------------------
+Checando status do cenario rbridges-only
+-----------------------Start begin: Cenario : 20:58:24 07/05-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/vms para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links_connections para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/rbridges para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/bridges para /opt/psapt/cenarios/rbridges-only/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p3
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p3 rb3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 rb3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p3 rb4_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb3_p3 rb4_p3
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb4_p1 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+Criando arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 20:59:09 07/05-----------------------
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/bridges
+-----------------------STOP begin: Cenario : 21:04:53 07/05-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Deletando a RBridge com comando - dladm delete-bridge  rb3_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Deletando a RBridge com comando - dladm delete-bridge  rb4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb4_p1
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rbridges-only/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rbridges-only
+RUN_DIR -> /opt/psapt/cenarios/rbridges-only/run
+LOG -> /opt/psapt/cenarios/rbridges-only/run/log
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/vms
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 21:05:18 07/05-----------------------
+Checando status do cenario rbridges-only
+-----------------------Start begin: Cenario : 21:07:53 07/05-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/vms para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links_connections para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/rbridges para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/bridges para /opt/psapt/cenarios/rbridges-only/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p3
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p2 rb2_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p3 rb3_p1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p2 rb3_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb2_p3 rb4_p2
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb3_p3 rb4_p3
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb4_p1 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+Criando arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 21:08:34 07/05-----------------------
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links_connections
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/rbridges
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/bridges
+-----------------------STOP begin: Cenario : 21:10:53 07/05-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Deletando a RBridge com comando - dladm delete-bridge  rb3_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Deletando a RBridge com comando - dladm delete-bridge  rb4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb2_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb3_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb4_p1
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rbridges-only/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb2_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb3_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p2
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb4_p3
+Deletando Simnet - /usr/sbin/dladm delete-simnet client1_1
+Deletando Simnet - /usr/sbin/dladm delete-simnet server1_1
+Voltando valores das variaveis
+Cenario -> /opt/psapt/cenarios/rbridges-only
+RUN_DIR -> /opt/psapt/cenarios/rbridges-only/run
+LOG -> /opt/psapt/cenarios/rbridges-only/run/log
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/vms
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links_connections
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/links
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/rbridges
+Deletando arquivo /opt/psapt/cenarios/rbridges-only/run/bridges
+Removendo arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Removendo arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------STOP end: Cenario : 21:11:25 07/05-----------------------
+Checando status do cenario rbridges-only
+-----------------------Start begin: Cenario : 19:21:49 25/06-----------------------
+check_vm_sanity
+O cenario possui VMs, checando se elas sao registradas
+client
+VM client registrada
+Checando link da VM client
+link client1_1 -> ok
+server
+VM server registrada
+Checando link da VM server
+link server1_1 -> ok
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/vms para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links_connections para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/links para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/rbridges para /opt/psapt/cenarios/rbridges-only/run
+Copiando arquivo /opt/psapt/cenarios/rbridges-only/bridges para /opt/psapt/cenarios/rbridges-only/run
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb1_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb2_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb3_p3
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p1
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p2
+Criando Simnet - /usr/sbin/dladm create-simnet rb4_p3
+Criando Simnet - /usr/sbin/dladm create-simnet client1_1
+Criando Simnet - /usr/sbin/dladm create-simnet server1_1
+Apagando arquivo links temporario
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb1_p1 client1_1
+Conectando Simnets - /usr/sbin/dladm modify-simnet -p rb4_p1 server1_1
+Apagando links_connections temporario
+Criando RBridge com comando - dladm create-bridge -P trill -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Criando RBridge com comando - dladm create-bridge -P trill -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Criando RBridge com comando - dladm create-bridge -P trill -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Apagando arquivo temporario rbridges
+Iniciando VM: client
+Definindo IP: 192.168.56.25 no link: client1_1
+Iniciando VM: server
+Definindo IP: 192.168.56.26 no link: server1_1
+Criando arquivo de status em /opt/psapt/cenarios/rbridges-only/run/rbridges-only.started
+Criando arquivo de status geral /opt/psapt/cenarios/control.run
+-----------------------Start end: Cenario : 19:22:27 25/06-----------------------
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+/tmp/pub/psatp nao existe, criando...
+Criando arquivo rb1_p2.run
+Processo de captura do link rb1_p2 iniciado com sucesso. Executando sob pid: 5340
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb1_p3.run
+Processo de captura do link rb1_p3 iniciado com sucesso. Executando sob pid: 5909
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb3_b
+Existe
+Listando nick da Rbridge rb3_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb3_b
+Listando nexthop da Rbridge rb3_b
+Checando modo de operacao da Rbridge rb3_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb3_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb3_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb4_a
+Existe
+Listando nick da Rbridge rb4_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb4_a
+Listando nexthop da Rbridge rb4_a
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb4_a
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+capture.sh: Checando existencia do diretorio /tmp/pub/psatp
+Criando arquivo rb3_p3.run
+Processo de captura do link rb3_p3 iniciado com sucesso. Executando sob pid: 6313
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb4_a
+Existe
+Listando nick da Rbridge rb4_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb4_a
+Listando nexthop da Rbridge rb4_a
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb4_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb3_b
+Existe
+Listando nick da Rbridge rb3_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb3_b
+Listando nexthop da Rbridge rb3_b
+Checando modo de operacao da Rbridge rb3_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb3_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb3_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb3_b
+Existe
+Listando nick da Rbridge rb3_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb3_b
+Listando nexthop da Rbridge rb3_b
+Checando modo de operacao da Rbridge rb3_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb3_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb3_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb2_b
+Existe
+Listando nick da Rbridge rb2_b
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb2_b
+Listando nexthop da Rbridge rb2_b
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Checando modo de operacao da Rbridge rb2_b
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb2_b
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb1_a
+Existe
+Listando nick da Rbridge rb1_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb1_a
+Listando nexthop da Rbridge rb1_a
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb1_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb1_a
+Checando status do cenario rbridges-only
+Checando existencia da Rbridge rb4_a
+Existe
+Listando nick da Rbridge rb4_a
+Rbridge em modo debug, detectando nick pelo LOG
+Listando links da Rbridge rb4_a
+Listando nexthop da Rbridge rb4_a
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Checando modo de operacao da Rbridge rb4_a
+Modo debug identificado
+Colhendo informacoes (debug) da Rbridge rb4_a
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando a existencia da VM client
+Existe
+Checando status do cenario rbridges-only
+Checando a existencia da VM server
+Existe
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando status do cenario rbridges-only
+Checando a existencia da VM server
+Existe
+Checando status do cenario rbridges-only
+Checando a existencia da VM client
+Existe
+Checando status do cenario rbridges-only
+Salvando variaveis cenario,run_dir,LOG_FILE
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/vms
+Checando diferenca em arquivo /opt/psapt/cenarios/rbridges-only/links_connections
+3a4,6
+> rb1_p2:rb2_p1
+> rb1_p3:rb3_p1
+> rb3_p3:rb4_p3
+Encontrada diferenca no arquivo /opt/psapt/cenarios/rbridges-only/links_connections
+Cenario em exec. diferente do original...
+Setando var: cenario, run_dir ,LOG_FILE
+Cenario -> /opt/psapt/cenarios/rbridges-only/run
+RUN_DIR -> /opt/psapt/cenarios/rbridges-only/run/run
+LOG -> /opt/psapt/cenarios/rbridges-only/run/run/../log
+-----------------------STOP begin: Cenario : 19:54:11 25/06-----------------------
+Removendo IP:  no link: client1_1
+Desligando VM: client
+Removendo IP:  no link: server1_1
+Desligando VM: server
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb1_p3  -l rb1_p2  -l rb1_p1  rb1_a
+Deletando a RBridge com comando - dladm delete-bridge  rb1_a
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb2_p3  -l rb2_p2  -l rb2_p1  rb2_b
+Deletando a RBridge com comando - dladm delete-bridge  rb2_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb3_p3  -l rb3_p2  -l rb3_p1  rb3_b
+Deletando a RBridge com comando - dladm delete-bridge  rb3_b
+Removendo links da RBridge com comando - dladm remove-bridge  -l rb4_p3  -l rb4_p2  -l rb4_p1  rb4_a
+Deletando a RBridge com comando - dladm delete-bridge  rb4_a
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb4_p1
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p2
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb1_p3
+Desconectando Simnets - /usr/sbin/dladm modify-simnet -p none rb3_p3
+Testando por capturas em links nao paradas
+/opt/psapt/cenarios/rbridges-only/run/run/*.run: No such file or directory
+Nenhuma captura em andamento.
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p1
+Deletando Simnet - /usr/sbin/dladm delete-simnet rb1_p2
+/usr/sbin/dladm: simnet deletion failed: link busy
+Erro ao deletar simnet rb1_p2
+Checando status do cenario rbridges-only

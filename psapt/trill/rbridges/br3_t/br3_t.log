@@ -1,0 +1,87 @@
+
+2013/08/21 14:14:41 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/21 14:14:41 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/21 14:14:41 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/21 14:14:41 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2013/08/21 14:15:04 ISIS: isis_dr_commence l1
+2013/08/21 14:15:04 ISIS: New LSP with ID ee82.596f.8976-59-00 seqnum 00000001
+2013/08/21 14:15:04 ISIS: ISIS-Evt (rb1_a) DIS status change
+2013/08/21 14:15:05 ISIS: isis_dr_commence l1
+2013/08/21 14:15:05 ISIS: New LSP with ID ee82.596f.8976-58-00 seqnum 00000001
+2013/08/21 14:15:05 ISIS: ISIS-Evt (rb1_a) DIS status change
+2013/08/21 14:15:13 ISIS: ISIS TRILL LSPDB acquire event:1 cid:89, done:0
+2013/08/21 14:15:14 ISIS: ISIS TRILL LSPDB acquire event:1 cid:89, done:0
+2013/08/21 14:15:22 ISIS: ISIS TRILL LSPDB acquire event:1 cid:89, done:0
+2013/08/21 14:15:23 ISIS: ISIS TRILL LSPDB acquire event:1 cid:89, done:1
+2013/08/21 14:15:23 ISIS: ISIS TRILL generated nick:36426
+2013/08/21 14:15:23 ISIS: SIGHUP received
+2013/08/21 14:15:23 ISIS: Reload
+2013/08/21 14:15:23 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/21 14:15:23 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/21 14:15:23 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/21 14:15:23 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2013/08/21 14:15:47 ISIS: isis_dr_commence l1
+2013/08/21 14:15:47 ISIS: New LSP with ID ee82.596f.8976-58-00 seqnum 00000001
+2013/08/21 14:15:47 ISIS: ISIS-Evt (rb1_a) DIS status change
+2013/08/21 14:15:48 ISIS: isis_dr_commence l1
+2013/08/21 14:15:48 ISIS: New LSP with ID ee82.596f.8976-59-00 seqnum 00000001
+2013/08/21 14:15:48 ISIS: ISIS-Evt (rb1_a) DIS status change
+2013/08/21 14:16:47 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/21 14:17:43 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/21 14:18:39 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/21 14:19:33 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/21 14:20:27 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/21 14:21:25 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/21 14:21:58 ISIS: ISIS TRILL removed any nickname associated with sysID:46cf.bb03.8e5c LSP seqnum:0x00000001 pseudonode:0
+2013/08/21 14:22:15 ISIS: ISIS TRILL removed any nickname associated with sysID:46cf.bb03.8e5c LSP seqnum:0x00000002 pseudonode:0
+2013/08/21 14:22:43 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 14:22:57 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 14:23:20 ISIS: ISIS-Spf: TENT is empty SPF-root:rb2aris
+2013/08/21 14:23:26 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 14:37:34 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 14:52:18 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 15:07:16 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 15:21:59 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/21 15:29:41 ISIS: Terminating on signal SIGTERM
+2013/08/23 10:33:19 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/23 10:33:19 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/23 10:33:20 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2013/08/23 10:33:20 ISIS: Quagga-ISISd 0.99.8 starting: vty@2604
+2013/08/23 10:33:45 ISIS: isis_dr_commence l1
+2013/08/23 10:33:45 ISIS: New LSP with ID ee82.596f.8976-09-00 seqnum 00000001
+2013/08/23 10:33:45 ISIS: ISIS-Evt (rb1_a) DIS status change
+2013/08/23 10:33:46 ISIS: isis_dr_commence l1
+2013/08/23 10:33:46 ISIS: New LSP with ID ee82.596f.8976-0a-00 seqnum 00000001
+2013/08/23 10:33:46 ISIS: ISIS-Evt (rb1_a) DIS status change
+2013/08/23 10:33:46 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 10:34:16 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 10:48:19 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 11:02:49 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 11:17:41 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 11:32:37 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 11:47:13 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:48:09 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:49:08 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:50:05 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:50:59 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:51:53 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:52:51 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:53:05 ISIS: ISIS-Upd (rb1_a): L1 LSP 46cf.bb03.8e5c.00-00 seq 0x00000007 aged out
+2013/08/23 11:53:05 ISIS: ISIS TRILL removed nickname:50222 associated with sysID:46cf.bb03.8e5c LSP ID:0x00000007 pseudonode:0
+2013/08/23 11:53:46 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:54:41 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:55:39 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:56:34 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:57:32 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:58:31 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 11:59:30 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 12:00:28 ISIS: ISIS-Spf: TENT is empty SPF-root:rb1
+2013/08/23 12:00:36 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 12:00:39 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 12:00:40 ISIS: ISIS-Spf: TENT is empty SPF-root:rb2
+2013/08/23 12:01:09 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 12:01:39 ISIS: ISIS-Upd (rb1_a): L1 LSP 46cf.bb03.8e5c.0b-00 seq 0x00000003 aged out
+2013/08/23 12:01:39 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 12:16:08 ISIS: ISIS TRILL nick recv:50222 from sysID:46cf.bb03.8e5c
+2013/08/23 12:24:39 ISIS: SIGHUP received
+2013/08/23 12:24:39 ISIS: Reload

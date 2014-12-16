@@ -1,0 +1,83 @@
+
+2014/08/13 08:47:51 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:47:51 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:47:51 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:47:51 ISIS: Quagga-ISISd 0.99.8 starting: vty@2608
+2014/08/13 08:48:12 ISIS: ISIS TRILL removed any nickname associated with sysID:5e8e.351d.a2e4 LSP seqnum:0x00000002 pseudonode:0
+2014/08/13 08:48:13 ISIS: isis_dr_commence l1
+2014/08/13 08:48:13 ISIS: New LSP with ID ae75.86c6.e40b-09-00 seqnum 00000001
+2014/08/13 08:48:13 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:48:14 ISIS: isis_dr_commence l1
+2014/08/13 08:48:14 ISIS: New LSP with ID ae75.86c6.e40b-0b-00 seqnum 00000001
+2014/08/13 08:48:14 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:48:16 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:48:22 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:48:23 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:48:25 ISIS: ISIS TRILL LSPDB acquire event:0 cid:11, done:0
+2014/08/13 08:48:28 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:48:31 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:48:32 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:48:40 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:48:41 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:48:47 ISIS: SIGHUP received
+2014/08/13 08:48:47 ISIS: Reload
+2014/08/13 08:48:47 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:48:47 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:48:47 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:48:47 ISIS: Quagga-ISISd 0.99.8 starting: vty@2608
+2014/08/13 08:48:51 ISIS: ISIS TRILL removed any nickname associated with sysID:5e8e.351d.a2e4 LSP seqnum:0x00000002 pseudonode:0
+2014/08/13 08:49:00 ISIS: ISIS TRILL LSPDB acquire event:0 cid:11, done:0
+2014/08/13 08:49:09 ISIS: ISIS TRILL LSPDB acquire event:0 cid:11, done:0
+2014/08/13 08:49:11 ISIS: isis_dr_commence l1
+2014/08/13 08:49:11 ISIS: New LSP with ID ae75.86c6.e40b-09-00 seqnum 00000001
+2014/08/13 08:49:11 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:49:13 ISIS: isis_dr_commence l1
+2014/08/13 08:49:13 ISIS: New LSP with ID ae75.86c6.e40b-0b-00 seqnum 00000001
+2014/08/13 08:49:13 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:49:20 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:49:22 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:49:29 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:0
+2014/08/13 08:49:31 ISIS: ISIS TRILL LSPDB acquire event:1 cid:11, done:1
+2014/08/13 08:49:31 ISIS: ISIS TRILL generated nick:3093
+2014/08/13 08:49:31 ISIS: SIGHUP received
+2014/08/13 08:49:31 ISIS: Reload
+2014/08/13 08:49:31 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:49:31 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:49:31 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 08:49:31 ISIS: Quagga-ISISd 0.99.8 starting: vty@2608
+2014/08/13 08:49:34 ISIS: (rb2_b): DS ======= LSP 5e8e.351d.a2e4.00-00, seq 0x00000002, cksum 0x8cd9, lifetime 1185s on rb2_p1
+2014/08/13 08:49:34 ISIS: (rb2_b): DS ======= LSP 5e8e.351d.a2e4.05-00, seq 0x00000001, cksum 0xd277, lifetime 1199s on rb2_p1
+2014/08/13 08:49:45 ISIS: New LSP with ID 5e8e.351d.a2e4-00-00 seqnum 00000000
+2014/08/13 08:49:45 ISIS: New LSP with ID 5e8e.351d.a2e4-05-00 seqnum 00000000
+2014/08/13 08:49:46 ISIS: ISIS TRILL nick recv:53964 from sysID:5e8e.351d.a2e4
+2014/08/13 08:49:56 ISIS: isis_dr_commence l1
+2014/08/13 08:49:56 ISIS: New LSP with ID ae75.86c6.e40b-09-00 seqnum 00000001
+2014/08/13 08:49:56 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:49:56 ISIS: isis_dr_commence l1
+2014/08/13 08:49:56 ISIS: New LSP with ID ae75.86c6.e40b-0b-00 seqnum 00000001
+2014/08/13 08:49:56 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:49:59 ISIS: ISIS-Evt (rb2_b) DIS status change
+2014/08/13 08:50:04 ISIS: ISIS TRILL nick recv:53964 from sysID:5e8e.351d.a2e4
+2014/08/13 09:04:12 ISIS: ISIS TRILL nick recv:53964 from sysID:5e8e.351d.a2e4
+2014/08/13 09:11:02 ISIS: ISIS TRILL nick recv:53964 from sysID:5e8e.351d.a2e4
+2014/08/13 09:15:37 ISIS: ISIS TRILL nick recv:53964 from sysID:5e8e.351d.a2e4
+2014/08/13 09:19:02 ISIS: ISIS TRILL nick recv:53964 from sysID:5e8e.351d.a2e4
+2014/08/13 09:21:00 ISIS: SIGHUP received
+2014/08/13 09:21:00 ISIS: Reload
+2014/08/13 09:21:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:00 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: Quagga-ISISd 0.99.8 starting: vty@2608
+2014/08/13 09:21:01 ISIS: SIGHUP received
+2014/08/13 09:21:01 ISIS: Reload
+2014/08/13 09:21:01 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: Quagga-ISISd 0.99.8 starting: vty@2608
+2014/08/13 09:21:01 ISIS: SIGHUP received
+2014/08/13 09:21:01 ISIS: Reload
+2014/08/13 09:21:01 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: buffer_flush_available: write error on fd 0: Bad file number
+2014/08/13 09:21:01 ISIS: Quagga-ISISd 0.99.8 starting: vty@2608
+2014/08/13 09:21:01 ISIS: Terminating on signal SIGTERM

@@ -1,0 +1,10 @@
+create -b
+set zonepath=/zones/cliente_vlan
+set brand=solaris
+set autoboot=false
+set ip-type=exclusive
+add net
+set configure-allowed-address=true
+set physical=web1
+end
+

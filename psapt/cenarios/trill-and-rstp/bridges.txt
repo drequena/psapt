@@ -1,0 +1,4 @@
+sw1_a:4096:sw1_p1:sw1_p2
+sw2_a:32768:sw2_p1:sw2_p2:sw2_p3
+sw3_a:32768:sw3_p1:sw3_p2:sw3_p3
+sw4_a:32768:sw4_p1:sw4_p2
